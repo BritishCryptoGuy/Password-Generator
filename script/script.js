@@ -1,5 +1,5 @@
 // Array of lowercase characters to be included in password
-var lowerCasedCharacters = [
+const lowerCasedCharacters = [
   "a",
   "b",
   "c",
@@ -29,7 +29,7 @@ var lowerCasedCharacters = [
 ];
 
 // Array of uppercase characters to be included in password
-var upperCasedCharacters = [
+const upperCasedCharacters = [
   "A",
   "B",
   "C",
@@ -59,10 +59,10 @@ var upperCasedCharacters = [
 ];
 
 // Array of numeric characters to be included in password
-var numericCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const numericCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 // Array of special characters to be included in password
-var specialCharacters = [
+const specialCharacters = [
   "@",
   "%",
   "+",
@@ -88,7 +88,7 @@ var specialCharacters = [
   ".",
 ];
 
-//All options as amArray
+//All options Array
 let allOptions = [
   lowerCasedCharacters,
   upperCasedCharacters,
@@ -96,28 +96,22 @@ let allOptions = [
   specialCharacters,
 ];
 
-//Startover write password function
+//startOver write password function
 function startOver() {
-  let carryOn = confirm("Would you like to start again?");
-  if (carryOn) {
-    writePassword();
-  } else {
-    alert("No password this time!");
-  }
+  let carryOn = confirm("Would you like to start again?")
+    ? writePassword()
+    : alert("No password this time");
   return;
 }
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-  let numChar = +prompt(
+  let numChar = 0;
+  numChar = +prompt(
     "Please input how many characters you would like in your password (Between 10-64)"
   );
-  if (isNaN(numChar)) {
-    alert("Please input a number as specified");
-    startOver();
-    return;
-  } else if (numChar < 10 || numChar > 64) {
-    alert("Please input a number between 10-64");
+  if (isNaN(numChar) || numChar < 10 || numChar > 64) {
+    alert("Please input a number a number between 10-64");
     startOver();
     return;
   }
@@ -159,9 +153,10 @@ function getRandom(arr) {
 // Function to generate password with user input
 function generatePassword() {
   let passOptions = getPasswordOptions();
+  if (typeof passOptions === "undefined") return;
   let specs = [getRandom(passOptions)];
   let passArray = [];
-  for (let num = 0; num <= specs[0][0]; num++) {
+  for (let num = 0; num < specs[0][0]; num++) {
     num;
     passArray.push(specs[0][1][Math.floor(Math.random() * specs[0][1].length)]);
   }
@@ -171,12 +166,13 @@ function generatePassword() {
 }
 
 // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+let generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  let password = generatePassword();
+  if (typeof password === "undefined") return;
+  let passwordText = document.querySelector("#password");
   passwordText.value = password;
   return;
 }
