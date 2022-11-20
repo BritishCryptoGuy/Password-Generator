@@ -95,6 +95,7 @@ let allOptions = [
   numericCharacters,
   specialCharacters,
 ];
+let allowedChars = [];
 
 //startOver write password function
 function startOver() {
@@ -133,7 +134,7 @@ function getPasswordOptions() {
 
 //randomIncludes function= pushes specified characters to own array
 function randomIncludes(cases) {
-  let allowedChars = [];
+  allowedChars = [];
   for (let i in cases) {
     if (cases[i]) {
       allowedChars.push(...allOptions[i]);
@@ -146,19 +147,28 @@ function randomIncludes(cases) {
 function getRandom(arr) {
   let numChar = arr.shift();
   let cases = [...arr[0]];
-  let optionsArray = randomIncludes(cases);
-  return [numChar, optionsArray];
+  randomIncludes(cases);
+  return [numChar, cases];
 }
 
 // Function to generate password with user input
 function generatePassword() {
   let passOptions = getPasswordOptions();
   if (typeof passOptions === "undefined") return;
-  let specs = [getRandom(passOptions)];
+  let specs = getRandom(passOptions);
   let passArray = [];
-  for (let num = 0; num < specs[0][0]; num++) {
+  console.log(allowedChars);
+  for (let num = 0; num < specs[0]; num++) {
     num;
-    passArray.push(specs[0][1][Math.floor(Math.random() * specs[0][1].length)]);
+    if (specs[1][num]) {
+      passArray.push(
+        allOptions[num][Math.floor(Math.random() * allOptions[num].length)]
+      );
+    } else {
+      passArray.push(
+        allowedChars[Math.floor(Math.random() * allowedChars.length)]
+      );
+    }
   }
   let password = passArray.join("");
   console.log(password);
