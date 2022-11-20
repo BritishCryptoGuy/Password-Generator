@@ -132,7 +132,7 @@ function getPasswordOptions() {
   return passChoices;
 }
 
-//randomIncludes function= pushes specified characters to own array
+//randomIncludes function= pushes specified characters to own array, used in generatePassword()
 function randomIncludes(cases) {
   allowedChars = [];
   for (let i in cases) {
@@ -143,8 +143,8 @@ function randomIncludes(cases) {
   return allowedChars;
 }
 
-// Function for getting a random element from an array
-function getRandom(arr) {
+// randomFilter for reorganising data to make easy to use.
+function randomFilter(arr) {
   let numChar = arr.shift();
   let cases = [...arr[0]];
   randomIncludes(cases);
@@ -155,9 +155,8 @@ function getRandom(arr) {
 function generatePassword() {
   let passOptions = getPasswordOptions();
   if (typeof passOptions === "undefined") return;
-  let specs = getRandom(passOptions);
+  let specs = randomFilter(passOptions);
   let passArray = [];
-  console.log(allowedChars);
   for (let num = 0; num < specs[0]; num++) {
     num;
     if (specs[1][num]) {
@@ -171,7 +170,7 @@ function generatePassword() {
     }
   }
   let password = passArray.join("");
-  console.log(password);
+  console.log(password); //Kept for easy dev verification
   return password;
 }
 
