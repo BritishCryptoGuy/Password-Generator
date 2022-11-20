@@ -1,79 +1,38 @@
-# Module 5 Challenge: Password Generator
+# Bootcamp Challenge 5- Password Generator
 
-## Overview
+## Skills for life Bootcamp Challenge 05 (Password Generator) short description
 
-This week’s challenge requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
+The objective of this challenge/project is to create the code to make a functional password generator using limited pre existing CSS and HTML code. This code will then run in the browser and will dynamically update upon its use. The interface for it shall be clean and polished all while adapting to multiple different screen sizesl
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
+The code itself will be able to take in multiple different types of data for producing an addequate password.
 
-## Instructions
+### User Story
 
-The following image shows the web application's appearance and functionality:
+```
+AS A Developer in training
+I WANT to create a password generator that can work on a plethora of devices and is adaptable according to users preferences
+SO THAT it can be used to create passwords by users
+```
 
-![password generator demo](./assets/05-javascript-challenge-demo.png)
+### Acceptance Criteria
 
+My code will work and the website will work on all devices. It will fit certain requirements as have been specified for the challenge itself, these including the following:
 
-* Generate a password when the button is clicked
-  * Present a series of prompts for password criteria
-    * Length of password
-      * At least 10 characters but no more than 64.
-    * Character types
-      * Lowercase
-      * Uppercase
-      * Numeric
-      * Special characters ($@%&*, etc)
-  * Code should validate for each input and at least one character type should be selected
-  * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
+- Generate password button will start the proccess of password generation once clicked (this proccess will include asking for user input)
+- The options available to the user will include: password length and allowed character types (Lowercase, Uppercase, Numeric, Special characters)
+- At least one of each user requested character type will be included in the generated password
+- Once generated the password will be displayed on the webpage for the user to view and use as they please
 
-## Grading Requirements
+### Screenshot of completed site
 
-This challenge is graded based on the following criteria: 
+The following image shows the web application's appearance
 
-### Technical Acceptance Criteria: 40%
+![The screenshot displays the website with the password generator and a password being shown post generation.](style/images/password-generator-website.png)
 
-* Satisfies all of the above acceptance criteria plus the following:
+### License
 
-  * The challenge should not produce any errors in the console when you inspect it using Chrome DevTools.
+Please refer to license in the Repo
 
-### Deployment: 32%
+### Website Link
 
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
----
-
-© 2022 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+https://britishcryptoguy.github.io/Bootcamp-Password-Generator/
