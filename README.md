@@ -1,27 +1,12 @@
-# Bootcamp Challenge 5- Password Generator
+# Password Generator
 
-## Skills for life Bootcamp Challenge 05 (Password Generator) short description
+[![License: MIT ](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-The objective of this challenge/project is to create the code to make a functional password generator using limited pre existing CSS and HTML code. This code will then run in the browser and will dynamically update upon its use. The interface for it shall be clean and polished all while adapting to multiple different screen sizesl
+## Short description
 
-The code itself will be able to take in multiple different types of data for producing an addequate password.
+The objective of this project is to create a functional password generator. Relying on user inputs to various options a password will be generated for the user to use for their own personal needs. My aim is to make the generator easy to understand and use with minimal user interaction besides just a few choices to make the perfect password for the user.
 
-### User Story
-
-```
-AS A Developer in training
-I WANT to create a password generator that can work on a plethora of devices and is adaptable according to users preferences
-SO THAT it can be used to create passwords by users
-```
-
-### Acceptance Criteria
-
-My code will work and the website will work on all devices. It will fit certain requirements as have been specified for the challenge itself, these including the following:
-
-- Generate password button will start the proccess of password generation once clicked (this proccess will include asking for user input)
-- The options available to the user will include: password length and allowed character types (Lowercase, Uppercase, Numeric, Special characters)
-- At least one of each user requested character type will be included in the generated password
-- Once generated the password will be displayed on the webpage for the user to view and use as they please
+In this day and age having a non generated and/or easy password can be a mistake, password security is essential to prevent foul play. This password generator can create very strong passwords depending on what the user selects.
 
 ### Screenshot of completed site
 
@@ -29,10 +14,22 @@ The following image shows the web application's appearance
 
 ![The screenshot displays the website with the password generator and a password being shown post generation.](style/images/password-generator-website.png)
 
+### Usage
+
+In order to use, when on the website click the "Generate Password" button. You will then be displayed with the following options/prompts:
+
+- Please input how many characters you would like in your password (Between 10-64)
+- Include lowercase letters?
+- Include uppercase letters?
+- Include numbers?
+- Include special characters?
+
+After this your password will be generated, you will then be able to copy it and use it as you wish!
+
 ### License
 
-Please refer to license in the Repo
+MIT
 
 ### Website Link
 
-https://britishcryptoguy.github.io/Bootcamp-Password-Generator/
+https://britishcryptoguy.github.io/Password-Generator/
